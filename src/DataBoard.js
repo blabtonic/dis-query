@@ -2,12 +2,19 @@ import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
 
 const TableBody = props => {
-    return (
-        <tbody/>
-    );
+    const rows = props.bandData.map((row, index) =>{
+        return (
+            <tr key={index}>
+                <td>{row.album}</td>
+                <td>{row.name}</td>
+            </tr>
+        );
+    });
+
+    return <tbody>{rows}</tbody>
 }
 
-class DataBoard extends Component{
+class DataBoard extends Component {
     render() {
         const { bandData } = this.props;
 
