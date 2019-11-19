@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table } from 'react-bootstrap';
+import { Table, Button } from 'react-bootstrap';
 
 const TableBody = props => {
     const rows = props.bandData.map((row, index) =>{
@@ -7,6 +7,10 @@ const TableBody = props => {
             <tr key={index}>
                 <td>{row.album}</td>
                 <td>{row.name}</td>
+                <td>
+                    <Button variant="danger" size="sm" >DELETE</Button>
+                    
+                </td>
             </tr>
         );
     });
