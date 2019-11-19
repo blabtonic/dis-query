@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import DataBoard from './DataBoard';
 
 class App extends Component {
+  state = {};
   render() {
     const bands = [
       {
