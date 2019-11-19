@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
 
+const TableBody = props => {
+    return (
+        <tbody/>
+    );
+}
+
 class DataBoard extends Component{
     render() {
+        const { bandData } = this.props;
+
         return (
             <Table striped bordered hover size="sm">
                 <thead>
                     <tr>
-                    <th>Name</th>
-                    <th>Artist</th>
+                        <th>Album</th>
+                        <th>Artist</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                    <td>Mandisc</td>
-                    <td>Foo</td>
-                    </tr>
-                    
-                </tbody>
+                <TableBody bandData={bandData}></TableBody>
             </Table>
         );
     }
