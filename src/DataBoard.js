@@ -16,7 +16,7 @@ const TableBody = props => {
 
 class DataBoard extends Component {
     render() {
-        const { bandData } = this.props;
+        const { bandData, removeRecord } = this.props;
 
         return (
             <Table striped bordered hover size="sm">
@@ -26,7 +26,7 @@ class DataBoard extends Component {
                         <th>Artist</th>
                     </tr>
                 </thead>
-                <TableBody bandData={bandData}></TableBody>
+                <TableBody bandData={bandData} removeRecord={removeRecord}></TableBody>
             </Table>
         );
     }
