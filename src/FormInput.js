@@ -28,11 +28,13 @@ class FormInput extends Component {
                 <label>Album Name</label>
                 <input
                     type="text"
+                    name="name"
                     value={name}
                     onChange={this.handleChange} />
                 <label>Band Name</label>
                 <input 
                     type="text"
+                    name="album"
                     value={album}
                     onChange={this.handleChange} />
             </form>
