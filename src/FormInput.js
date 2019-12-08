@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Form, Button } from 'react-bootstrap';
 
 class FormInput extends Component {
     constructor(props) {
@@ -29,6 +30,26 @@ class FormInput extends Component {
         const { name, album } = this.state;
 
         return(
+            <Form>
+                <Form.Group>
+                    <Form.Label>Artist Name</Form.Label>
+                    <Form.Control type="text" placeholder="Enter Artist Name" name="name" value={name} onChange={this.handleChange} />
+                </Form.Group>
+
+                <Form.Group>
+                    <Form.Label>Album Name</Form.Label>
+                    <Form.Control type="text" placeholder="Enter Album Name" name="album" value={album} onChange={this.handleChange} />
+                </Form.Group>
+
+                <Button variant="primary" type="submit" onClick={this.submitForm}>Submit</Button>
+            </Form>
+        );
+    }
+}
+
+/**
+ * 
+ *         return(
             <form>
                 <label>Band Name</label>
                 <input
@@ -48,7 +69,5 @@ class FormInput extends Component {
                     onClick={this.submitForm} />
             </form>
         );
-    }
-}
-
+ */
 export default FormInput;
