@@ -3,20 +3,7 @@ import DataBoard from './DataBoard';
 
 class App extends Component {
   state = {
-    bands: [
-      {
-        album: 'Mandrakes',
-        name: 'Foo', 
-      },
-      {
-        album: 'SonicFire',
-        name: 'abyss',
-      },
-      {
-        album: 'Genocide',
-        name: 'George Backson',
-      }
-    ],
+    bands: [],
   };
 
   removeRecord = index =>{
