@@ -5,8 +5,17 @@ class App extends Component {
   state = {
     bands: [
       {
-        album: 'Genocide',
+        album: 'Mandrakes',
+        name: 'Foo', 
       },
+      {
+        album: 'SonicFire',
+        name: 'abyss',
+      },
+      {
+        album: 'Genocide',
+        name: 'George Backson',
+      }
     ],
   };
 
@@ -21,16 +30,7 @@ class App extends Component {
   }
 
   render() {
-    const bands = [
-      {
-        album: 'Mandrakes',
-        name: 'Foo', 
-      },
-      {
-        album: 'SonicFire',
-        name: 'abyss',
-      }
-    ];
+    const { bands } = this.state;
 
     return (
       <div className="App">
