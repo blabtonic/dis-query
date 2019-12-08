@@ -20,6 +20,11 @@ class FormInput extends Component {
         });
     }
 
+    submitForm = () => {
+        this.props.handleSubmit(this.state);
+        this.setState(this.initState);
+    }
+
     render() {
         const { name, album } = this.state;
 
@@ -37,6 +42,10 @@ class FormInput extends Component {
                     name="album"
                     value={album}
                     onChange={this.handleChange} />
+                <input 
+                    type="button"
+                    value="Submit"
+                    onClick={this.submitForm} />
             </form>
         );
     }
