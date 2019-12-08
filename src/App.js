@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DataBoard from './DataBoard';
+import FormInput from './FormInput';
 
 class App extends Component {
   state = {
@@ -22,6 +23,7 @@ class App extends Component {
     return (
       <div className="App">
         <DataBoard bandData={bands} removeRecord={this.removeRecord}></DataBoard>
+        <FormInput></FormInput>
       </div>
     );
   }
