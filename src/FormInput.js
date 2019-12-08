@@ -30,13 +30,13 @@ class FormInput extends Component {
 
         return(
             <form>
-                <label>Album Name</label>
+                <label>Band Name</label>
                 <input
                     type="text"
                     name="name"
                     value={name}
                     onChange={this.handleChange} />
-                <label>Band Name</label>
+                <label>Album Name</label>
                 <input 
                     type="text"
                     name="album"

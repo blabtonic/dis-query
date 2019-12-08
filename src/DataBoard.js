@@ -5,8 +5,8 @@ const TableBody = props => {
     const rows = props.bandData.map((row, index) =>{
         return (
             <tr key={index}>
-                <td>{row.album}</td>
                 <td>{row.name}</td>
+                <td>{row.album}</td>
                 <td>
                     <Button variant="danger" size="sm" onClick={() => props.removeRecord(index)}>DELETE</Button>
                 </td>
@@ -25,8 +25,8 @@ class DataBoard extends Component {
             <Table striped bordered hover size="sm">
                 <thead>
                     <tr>
-                        <th>Album</th>
                         <th>Artist</th>
+                        <th>Album</th>
                         <th>Settings</th>
                     </tr>
                 </thead>
