@@ -8,8 +8,7 @@ const TableBody = props => {
                 <td>{row.album}</td>
                 <td>{row.name}</td>
                 <td>
-                    <Button variant="danger" size="sm" >DELETE</Button>
-                    
+                    <Button variant="danger" size="sm" onClick={() => props.removeRecord(index)}>DELETE</Button>
                 </td>
             </tr>
         );
