@@ -7,7 +7,7 @@ class App extends Component {
     bands: [],
   };
 
-  removeRecord = index =>{
+  removeRecord = index => {
     const { bands } = this.state;
 
     this.setState({
@@ -17,13 +17,17 @@ class App extends Component {
     });
   }
 
+  handleSubmit = band => {
+    this.setState({bands: [...this.state.bands, band]});
+  }
+
   render() {
     const { bands } = this.state;
 
     return (
       <div className="App">
         <DataBoard bandData={bands} removeRecord={this.removeRecord}></DataBoard>
-        <FormInput></FormInput>
+        <FormInput handleSubmit={this.handleSubmit}></FormInput>
       </div>
     );
   }
