@@ -27,6 +27,7 @@ class DataBoard extends Component {
                     <tr>
                         <th>Album</th>
                         <th>Artist</th>
+                        <th>Settings</th>
                     </tr>
                 </thead>
                 <TableBody bandData={bandData} removeRecord={removeRecord}></TableBody>
