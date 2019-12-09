@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, InputGroup } from 'react-bootstrap';
 
 class FormInput extends Component {
     constructor(props) {
@@ -30,44 +30,25 @@ class FormInput extends Component {
         const { name, album } = this.state;
 
         return(
-            <Form>
-                <Form.Group>
-                    <Form.Label>Artist Name</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Artist Name" name="name" value={name} onChange={this.handleChange} />
-                </Form.Group>
+            <div>
+                <Form>
+                    <Form.Group>
+                        <Form.Label>Artist Name</Form.Label>
+                        <Form.Control type="text" placeholder="Enter Artist Name" name="name" value={name} onChange={this.handleChange} />
+                    </Form.Group>
 
-                <Form.Group>
-                    <Form.Label>Album Name</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Album Name" name="album" value={album} onChange={this.handleChange} />
-                </Form.Group>
-
-                <Button variant="primary" type="submit" onClick={this.submitForm}>Submit</Button>
-            </Form>
+                    <Form.Group>
+                        <Form.Label>Album Name</Form.Label>
+                        <Form.Control type="text" placeholder="Enter Album Name" name="album" value={album} onChange={this.handleChange} />
+                    </Form.Group>
+                    
+                    <InputGroup className="mb-3">
+                        <Button variant="primary" onClick={this.submitForm}>Submit</Button>
+                    </InputGroup>
+                </Form>
+            </div>
         );
     }
 }
 
-/**
- * 
- *         return(
-            <form>
-                <label>Band Name</label>
-                <input
-                    type="text"
-                    name="name"
-                    value={name}
-                    onChange={this.handleChange} />
-                <label>Album Name</label>
-                <input 
-                    type="text"
-                    name="album"
-                    value={album}
-                    onChange={this.handleChange} />
-                <input 
-                    type="button"
-                    value="Submit"
-                    onClick={this.submitForm} />
-            </form>
-        );
- */
 export default FormInput;
